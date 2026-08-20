@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
 }
-html,body{
-    scroll-behavior: smooth;
-}
+html {
+  scroll-behavior: smooth;
+} /*se não tiver funcionando, Windows -> Configurações > Facilidade de Acesso > Tela > Mostrar animações no Windows*/
+
 body {
     margin: 0;
     width: 100%;
@@ -14,9 +15,7 @@ body {
     font-family: "Fjalla One", sans-serif;
     font-size: 25pt;
 }
-html {
-  scroll-behavior: smooth;
-}
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -33,7 +32,7 @@ html {
     background-image: url('images/bege-bg-1.jpg'); 
 }
 .container-tcn{
-    background-image: url(images/tijolo-bg-2.jpg);
+    background-image: url(images/green-wall-bg-2.jpg);
 }
 
 header{
@@ -131,7 +130,7 @@ img{
     border-bottom-left-radius: 30px;
 }
 
-img:hover{
+.home img:hover{
     transform: scale(1.05);
     transition: all 0.3s ease;
     border-top-right-radius: 0px;
@@ -147,26 +146,41 @@ img:hover{
     width: 30%;
 }
 .tcn-card{
-    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    width: 95%;
+    justify-self:center;
+    height: 50rem;
 }
 
 .tcn-info{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid red;
-    width: 80%;
-    min-height: 100%;
-    justify-content: center;
-    gap:5%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
+    grid-template-rows: 15rem 15rem;
+    height: 80%;
 }
-.tcn-info img{
-    width: 10%;
+.tcn-card h2{
     height: 10%;
-    height: auto;
-   
+}
+.tcn-info span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/postit-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tcn-info span img{ 
+    width: 70%;
+    height: 60%;
+}
+.tcn-card h2{
+  font-family: "Zeyada", cursive;
+  font-weight: 600;
+  font-size: 3em;
+  color: rgb(68, 49, 34);
+}
+.tcn-info span:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
