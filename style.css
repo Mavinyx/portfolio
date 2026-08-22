@@ -32,9 +32,11 @@ body {
     background-image: url('images/bege-bg-1.jpg'); 
 }
 .container-tcn{
-    background-image: url(images/green-wall-bg-2.jpg);
+    background-image: url('images/salmon-wall-bg.jpg');
 }
-
+.container-pj{
+    background-image:url('images/geometric-shapes-pattern.jpg') ;
+}
 header{
     display: flex;
     justify-self: center;
@@ -45,7 +47,7 @@ header{
     margin-top: 1%;
     padding: auto;
     background-color: rgba(0, 0, 0, 0.7);
-    color:aliceblue;
+    color:rgb(247, 246, 212);
     
 }
 nav{
@@ -143,7 +145,6 @@ img{
     justify-content: left;
     flex-direction: column;
     margin:10%;
-    width: 30%;
 }
 .tcn-card{
     display: flex;
@@ -164,23 +165,55 @@ img{
 }
 .tcn-info span{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("images/postit-3.png");
+    background-image: url("images/postit-orange.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 .tcn-info span img{ 
-    width: 70%;
+    width: 60%;
     height: 60%;
+    opacity: 80%;
+    margin-top: 27%;
+    margin-left: 15%;
 }
-.tcn-card h2{
-  font-family: "Zeyada", cursive;
+.tcn-card h2{ 
   font-weight: 600;
   font-size: 3em;
-  color: rgb(68, 49, 34);
-}
+  color: #ce6e36;
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
 .tcn-info span:hover{
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
+
+.pj-card{
+    border: 1px solid red;
+    width: 70%;
+    height: 70%;
+    justify-self:center;
+}
+.pj-itm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.pj-info{
+    display: block;
+    background-color: #ce6e36;
+}
+#detc-img{
+    width: 20vw;
+    max-width: 320px;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 10%;
+}
+.pj-itm:hover #detc-img{
+    opacity: 1;
+    visibility: visible;
+}
+
