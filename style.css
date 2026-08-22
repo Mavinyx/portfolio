@@ -140,7 +140,7 @@ img{
 }
 
 .about-card {
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -191,29 +191,41 @@ img{
     border: 1px solid red;
     width: 70%;
     height: 70%;
+    display: flex;
+    flex-direction: column;
     justify-self:center;
+    padding: 2rem;
 }
 .pj-itm{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
+    height: 10rem;
 }
 .pj-info{
-    display: block;
-    background-color: #ce6e36;
+    align-self: center;
+    margin-bottom: 15%;
+    width: 35vw;
+    font-family: "Anton", sans-serif;
+    font-size: 2em;
 }
-#detc-img{
+.pj-info span span{
+    font-size: 50%;
+    font-family: "Fjalla One", sans-serif;
+}
+.pj-info:hover{
+    color: aliceblue;
+}
+.pj-card hr{
+    border: none;
+    border-top: 3px solid #ce6e36;
+}
+.pj-itm img{
     width: 20vw;
-    max-width: 320px;
-    height: auto;
-    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 10%;
+    z-index: 10;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-.pj-itm:hover #detc-img{
-    opacity: 1;
-    visibility: visible;
-}
-

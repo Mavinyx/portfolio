@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio Nicolly Viana Martins</title>
     <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Fjalla+One&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20f8a440c6.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- Home-->
     <div id="home" class="container-home container">
         <header>
-        <nav>
-            <ul>
-            <li><i class="fa-solid fa-house-chimney"></i><a href="#home">Home</a></li>
-            <li><i class="fa-solid fa-user"></i><a href="#abtme">About me</a></li>
-            <li><i class="fa-solid fa-gears"></i><a href="#tcn">Technologies</a></li>
-            <li><i class="fa-solid fa-folder-open"></i></i><a href="#pj">Projects</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><i class="fa-solid fa-house-chimney"></i><a href="#home">Home</a></li>
+                    <li><i class="fa-solid fa-user"></i><a href="#abtme">About me</a></li>
+                    <li><i class="fa-solid fa-gears"></i><a href="#tcn">Technologies</a></li>
+                    <li><i class="fa-solid fa-folder-open"></i></i><a href="#pj">Projects</a></li>
+                </ul>
+            </nav>
         </header>
-    <section class="home">
+        <section class="home">
             <div class="info">
-            <h2>NICOLLY VIANA MARTINS</h2>
-            <hr> <!--separa com linhazinha -->
-            <p>
-                <span class="item-info">
-                    <i class="fa-regular fa-window-restore"></i>
-                    <strong>Desenvolvedora Web</strong>
-                </span>
+                <h2>NICOLLY VIANA MARTINS</h2>
+                <hr> <!--separa com linhazinha -->
+                <p>
+                    <span class="item-info">
+                        <i class="fa-regular fa-window-restore"></i>
+                        <strong>Desenvolvedora Web</strong>
+                    </span>
 
-                <span class="item-info">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <strong>Game Developer</strong>
-                </span>
+                    <span class="item-info">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <strong>Game Developer</strong>
+                    </span>
 
-                <span class="item-info-contact">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:nicollyvianamartins@gmail.com">Contato ></a>
-                </span>
-            </p>
+                    <span class="item-info-contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:nicollyvianamartins@gmail.com">Contato ></a>
+                    </span>
+                </p>
             </div>
             <img src="images/gato.png" alt="Foto">
-        </div>
+    </div>
     </section>
-     <!-- About me-->
+    <!-- About me-->
     <section id="abtme" class="container-abt-me container">
         <div class="about-card">
-           <h2>Sobre Mim</h2>
-           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-           </p>
+            <h2>Sobre Mim</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
     </section>
     <!-- Ferramentas-->
     <section id="tcn" class="container-tcn container">
         <div class="tcn-card">
-        <h2>Technologies</h2>
+            <h2>Technologies</h2>
             <div class="tcn-info">
                 <span><img src="images/HTML5_logo.png"></span>
                 <span><img src="images/CSS3_logo.png"></span>
@@ -77,16 +80,40 @@
             </div>
         </div>
     </section>
-      <!-- Projetos-->
+    <!-- Projetos-->
     <section id="pj" class="container-pj container">
         <div class="pj-card">
             <h2>Projects</h2>
-
+            <hr>
             <div class="pj-itm">
-                <span class="pj-info" id="detc-glp">DETECTOR DE GOLPES</span>
-                <img id="detc-img" src="images/detct-golpe-print.png" alt="Tela do projeto Detector de Golpes">
+                <span class="pj-info"><span>01. </span>DETECTOR DE GOLPES</span>
+                <img src="images/detct-golpe-print.png" class="pj-img">
+            </div>
+            <hr>
+            <div class="pj-itm">
+                <span class="pj-info"><span>02. </span>CATJUMPER</span>
+                <img src="images/detct-golpe-print.png" class="pj-img">
             </div>
         </div>
     </section>
+
+    <script>
+        
+        document.querySelectorAll('#pj > .pj-card > .pj-itm').forEach((project) => {
+            const image = project.querySelector('.pj-img');
+            const span = project.querySelector('.pj-info');
+            span.addEventListener('mouseenter', () => {
+                image.style.opacity = '1';
+                image.style.visibility = 'visible';
+            });
+
+            span.addEventListener('mouseleave', () => {
+                image.style.opacity = '0';
+                image.style.visibility = 'hidden';
+            });
+        });
+    </script>
+
 </body>
+
 </html>
