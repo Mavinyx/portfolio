@@ -32,11 +32,24 @@ body {
     background-image: url('images/bege-bg-1.jpg'); 
 }
 .container-tcn{
-    background-image: url('images/salmon-wall-bg.jpg');
+    background-image: url('images/wood-table.jpg');
 }
 .container-pj{
-    background-image:url('images/geometric-shapes-pattern.jpg') ;
+    background-image:url('images/geometric-shapes-pattern.jpg');
+    position: relative;
 }
+.container-pj::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+.container-pj > * {
+    position: relative;
+    z-index: 1;
+}
+
 header{
     display: flex;
     justify-self: center;
@@ -66,7 +79,7 @@ ul{
     width: 100%;
 }
 
-
+/* ============ HOME ==========================*/
 .home{
     display: flex;
     flex-direction: row;
@@ -139,6 +152,7 @@ img{
     border-bottom-left-radius: 0px;
 }
 
+/* ====================== About ==========================*/
 .about-card {
     width: 40%;
     display: flex;
@@ -146,6 +160,9 @@ img{
     flex-direction: column;
     margin:10%;
 }
+
+/* ===================== Technologies ==========================*/
+
 .tcn-card{
     display: flex;
     flex-direction: column;
@@ -155,19 +172,22 @@ img{
 }
 
 .tcn-info{
+    margin-left: 5%;
     display: grid;
     grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
     grid-template-rows: 15rem 15rem;
     height: 80%;
+    gap: 2%;
+    perspective: 800px; 
 }
-.tcn-card h2{
-    height: 10%;
-}
+
 .tcn-info span{
     display: flex;
-    background-image: url("images/postit-orange.png");
+    background-image: url("images/postit.png");
     background-size: contain;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    transform: rotateX(20deg) rotateY(6deg) rotateZ(-10deg);
 }
 .tcn-info span img{ 
     width: 60%;
@@ -179,51 +199,65 @@ img{
 .tcn-card h2{ 
   font-weight: 600;
   font-size: 3em;
-  color: #ce6e36;
-  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-    }
+  color: #494542;
+ }
 .tcn-info span:hover{
-    transform: scale(1.05);
-    transition: all 0.3s ease;
+    transform: rotateY(10deg) translateZ(20px) scale(1.05);
 }
 
+/* ===================== Projects ==========================*/
 .pj-card{
-    border: 1px solid red;
     width: 70%;
     height: 70%;
     display: flex;
     flex-direction: column;
     justify-self:center;
     padding: 2rem;
+    color:#eee6e2;
+}
+.pj-card h2{
+    font-size: 1.5em;
 }
 .pj-itm{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     gap: 2rem;
     height: 10rem;
+    position: relative;
 }
 .pj-info{
     align-self: center;
-    margin-bottom: 15%;
     width: 35vw;
     font-family: "Anton", sans-serif;
     font-size: 2em;
-}
-.pj-info span span{
-    font-size: 50%;
-    font-family: "Fjalla One", sans-serif;
+    background: linear-gradient(to right,
+        rgb(175, 125, 85) 50%,
+        #d6cfcc 50%
+        );
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1.4s ease;
 }
 .pj-info:hover{
-    color: aliceblue;
+    background-position: 0% 0%;
 }
+.pj-info span span{
+    font-family: "Fjalla One", sans-serif;
+}
+
 .pj-card hr{
     border: none;
-    border-top: 3px solid #ce6e36;
+    border-top: 3px solid #b4adaa;
 }
 .pj-itm img{
     width: 20vw;
+    position: absolute;
+    left: 70%;
     opacity: 0;
     z-index: 10;
     visibility: hidden;
