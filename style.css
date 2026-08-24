@@ -5,6 +5,27 @@ html {
   scroll-behavior: smooth;
 } /*se não tiver funcionando, Windows -> Configurações > Facilidade de Acesso > Tela > Mostrar animações no Windows*/
 
+
+h2 >i{
+    animation: rotate 3s ease-in-out 0s infinite alternate forwards;
+ }
+ @keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(100deg);
+    }
+ }
+ @keyframes aparecer {
+    from { opacity: 0; transform: translateY(60px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+body > .container > * {
+    animation: aparecer linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+  }
 body {
     margin: 0;
     width: 100%;
@@ -52,7 +73,7 @@ body {
 }
 footer{
     background-color: #302a25;
-    height: 20vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +101,7 @@ nav{
     color:rgb(243, 236, 194);
 }
 nav ul li:hover{
-    transform: scale(1.06);
+    transform: scale(1.1);
     transition: all 0.3s ease;;
 }
 ul{
@@ -214,6 +235,7 @@ img{
   font-size: 3em;
   color: #494542;
  }
+
 .tcn-info span:hover{
     transform: rotateY(10deg) translateZ(20px) scale(1.05);
 }
@@ -262,7 +284,6 @@ img{
 .pj-info p{
     font-size: 16pt;
 }
-
 .pj-card hr{
     border: none;
     border-top: 3px solid #b4adaa;
