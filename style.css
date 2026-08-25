@@ -1,6 +1,8 @@
 /* ============ CORPO ==========================*/
 html {
-  scroll-behavior: smooth;
+    overflow-x: hidden; 
+    max-width: 100vw;
+    scroll-behavior: smooth;
 } /*se não tiver funcionando, Windows -> Configurações > Facilidade de Acesso > Tela > Mostrar animações no Windows*/
 
 
@@ -14,7 +16,7 @@ body {
     overflow-x: hidden;
     
     font-family: "Fjalla One", sans-serif;
-    font-size: 25pt;
+    font-size: 2rem;
 }
 
 /* ============ ANIMAÇÕES ==========================*/
@@ -128,7 +130,7 @@ header > nav{
     color: white;
 }
 .info h2{
-    font-size: 50pt;
+    font-size: 2.5em;
 }
 
 .info p {
@@ -169,7 +171,7 @@ hr{
 }
 
 .home img{
-    max-width: 100%;
+    max-width: 30%;
     border-radius: 30px;
 }
 
@@ -202,8 +204,8 @@ hr{
     gap:10%;
 }
 .exp-info p{
-    font-size: 12pt;
-     width: 10vw;
+    font-size: 1.5rem;
+    width: 10vw;
 }
 /* ===================== Technologies ==========================*/
 
@@ -218,7 +220,7 @@ hr{
 .tcn-info{
     margin-left: 5%;
     display: grid;
-    grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
+    grid-template-columns: 15rem 15rem 15rem 15rem 15rem; /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
     grid-template-rows: 15rem 15rem;
     height: 80%;
     gap: 2%;
@@ -279,7 +281,7 @@ hr{
     font-size: 2em;
     background: linear-gradient(to right,
         rgb(175, 125, 85) 50%,
-        #d6cfcc 50%
+        #f3f1f0 50%
         );
     background-size: 200% 100%;
     background-position: 100% 0%;
@@ -300,6 +302,7 @@ hr{
 }
 .pj-itm img{
     width: 15vw;
+    height: 20vh;
     position: absolute;
     border-radius: 5px;
     left: 70%;
@@ -318,4 +321,55 @@ footer{
 }
 footer a:hover{
     border-bottom: 2px solid rgb(247, 246, 212);
+}
+/* ============ APARELHOS MENORES (gambiarra total pra n ter que mudar o resto do código) =====================*/
+@media (max-width: 850px) {
+ 
+  body { font-size: 16pt; }
+  .info { width: 90vw; font-size: 18pt; padding: 5%; box-sizing: border-box; }
+  .info h2 { font-size: 30pt; }
+
+  /* Cabeçalho */
+  header > nav { width: 95%; margin-top: 5px; padding: 5px; box-sizing: border-box; }
+  ul { flex-wrap: wrap; gap: 15px; padding: 10px 0; margin: 0; }
+
+  /* Home */
+  .home { flex-direction: column-reverse; margin: 30% 5% 5%; gap: 30px; }
+  .home img { max-width: 60%; }
+  .item-info-contact { width: 90%; box-sizing: border-box; }
+
+  /* About Me */
+  .about-card { flex-direction: column; width: 90%; margin: 10% 5%; gap: 30px; box-sizing: border-box; }
+  .about-exp hr { display: none;}
+  .exp-info { margin-left: 0; }
+  .exp-info p { width: 100%; font-size: 16pt; }
+
+  /* Tecnologias*/
+  .tcn-card { height: auto; padding-bottom: 20px; box-sizing: border-box;}
+  .tcn-info { 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: auto; 
+      justify-content: center; 
+      height: auto; 
+      gap: 1rem; 
+      margin-left: 0;
+      padding: 0 10px;
+  }
+
+  /* Projetos*/
+  .container-pj { height: auto; padding-bottom: 20px; }
+  .pj-card { width: 95%; height: auto; box-sizing: border-box;}
+  .pj-itm { height: auto; flex-direction: column; align-items: flex-start; margin-bottom: 20px; box-sizing: border-box;}
+  .pj-info { width: 100%; font-size: 1.5em; }
+  .pj-itm img { 
+      position: static; 
+      width: 100%; 
+      height: auto; 
+      opacity: 1; 
+      visibility: visible; 
+  }
+
+  /* Rodapé */
+  footer { height: auto; padding: 20px 0; }
+  footer ul { flex-direction: column; align-items: center; gap: 10px; }
 }
