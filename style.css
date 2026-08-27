@@ -279,6 +279,7 @@ hr{
     width: 35vw;
     font-family: "Anton", sans-serif;
     font-size: 2em;
+        width: 100%;
     background: linear-gradient(to right,
         rgb(175, 125, 85) 50%,
         #f3f1f0 50%
